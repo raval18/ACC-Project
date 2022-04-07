@@ -1,0 +1,2 @@
+https://www.w3schools.com/css/tryit.asp?filename=trycss_default
+Tryit Editor v3.7 Home CSS Try CSS Run ? Get your own website × Change Orientation Save Code Change Theme, Dark/Light Go to Spaces Privacy policy and Copyright 1999-2021 <!DOCTYPE html> <html> <head> <style> body { background-color: lightblue; } h1 { color: white; text-align: center; } p { font-family: verdana; font-size: 20px; } </style </head <body> <h1>My First CSS Example</h> <p>This is a paragraph.</p </body </html " + width + " x " + height + "

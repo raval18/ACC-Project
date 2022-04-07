@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head> 
+  <!-- v -dataLayer- v --> 
+  <script>dataLayer = [];
+  </script> 
+  <!-- ^ -dataLayer- ^ --> 
+  <meta charset="utf-8" />
+  <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-0d25ebe8951e931fb59",applicationID:"591976091"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);
+  </script> 
+  <style>body #backtotop {background: #E91C22;border-color: #E91C22;color: #ffffff;}body #backtotop:hover { background: #E91C22; border-color: #E91C22; }
+  </style> 
+  <style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazyload:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[data-sizes=auto] { display: block; width: 100%; }
+  </style> 
+  <meta property="og:site_name" content="Instructure" /> 
+  <meta property="og:url" content="https://www.instructure.com/policies/acceptable-use" /> 
+  <meta property="og:title" content="Acceptable Use Policy" /> 
+  <meta property="og:image" content="https://www.instructure.com/sites/default/files/image/2021-05/OG-Instructure-Learning-Platform.jpeg" /> 
+  <meta name="twitter:title" content="Acceptable Use Policy" /> 
+  <meta name="twitter:url" content="https://www.instructure.com/policies/acceptable-use" /> 
+  <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" /> 
+  <meta name="MobileOptimized" content="width" /> 
+  <meta name="HandheldFriendly" content="true" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <link rel="alternate" hreflang="en" href="https://www.instructure.com/policies/acceptable-use" /> 
+  <link rel="alternate" hreflang="en-au" href="https://www.instructure.com/en-au/node/2336" /> 
+  <link rel="alternate" hreflang="de" href="https://www.instructure.com/de/node/2336" /> 
+  <link rel="alternate" hreflang="pt-br" href="https://www.instructure.com/pt-br/node/2336" /> 
+  <link rel="alternate" hreflang="es" href="https://www.instructure.com/es/node/2336" /> 
+  <link rel="alternate" hreflang="es-es" href="https://www.instructure.com/es-es/node/2336" /> 
+  <link rel="alternate" hreflang="en-gb" href="https://www.instructure.com/en-gb/node/2336" /> 
+  <link rel="alternate" hreflang="nl" href="https://www.instructure.com/nl/node/2336" /> 
+  <link rel="shortcut icon" href="/themes/custom/themekit/favicon.ico" type="image/vnd.microsoft.icon" /> 
+  <link rel="canonical" href="https://www.instructure.com/policies/acceptable-use" /> 
+  <link rel="shortlink" href="https://www.instructure.com/node/2336" /> 
+  <link rel="revision" href="https://www.instructure.com/policies/acceptable-use" /> 
+  <script src="/sites/default/files/google_tag/primary/google_tag.script.js?r33kc4" defer=""></script> 
+  <script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+  </script> 
+  <title>Acceptable Use Policy | Instructure</title> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css__XNpIrnoRtwZS0AEBt0NKkjqIvXZ8Dv3oH6nkjk_Bvo.css" /> 
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_7IzImnBurCmGQcccKwLdzLNGSCKgboYvQqyV9cAXWWk.css" /> 
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2336","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,back_to_top\/back_to_top_js,back_to_top\/back_to_top_text,classy\/base,classy\/messages,classy\/node,clientside_validation_jquery\/cv.jquery.ckeditor,clientside_validation_jquery\/cv.jquery.validate,core\/Drupal,core\/html5shiv,core\/normalize,core\/picturefill,e3_marketo\/e3-marketo-munchkin,e3_regional_redirects\/country_redirect,e3_regional_redirects\/region_switcher,ins_personalization\/ins_personalization,lazy\/lazy,paragraphs\/drupal.paragraphs.unpublished,system\/base,themekit\/,themekit\/basic,themekit\/footer,themekit\/header,themekit\/link-default,themekit\/menu-callout,themekit\/page--full,themekit\/search,themekit\/text","theme":"themekit","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"back_to_top":{"back_to_top_button_trigger":"100","back_to_top_prevent_on_mobile":1,"back_to_top_prevent_in_admin":1,"back_to_top_button_type":"text","back_to_top_button_text":"Scroll to top"},"ckeditorheight":{"offset":1,"line_height":1.5,"unit":"em","disable_autogrow":null},"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":true,"messages":{"required":"This field is required.","remote":"Please fix this field.","email":"Please enter a valid email address.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","equalTo":"Please enter the same value again.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","step":"Please enter a multiple of {0}."}},"marketoForms":{"munchkinId":"449-BVJ-543","instanceHost":"\/\/app-ab20.marketo.com","logSubmission":false},"apiEndpoint":"https:\/\/pro.ip-api.com\/json?key=NsI877AefRmEbY3\u0026fields=countryCode","crrData":[],"disableModal":"1","lazy":{"lazysizes":{"lazyClass":"lazyload","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"lazyautosizes","srcAttr":"data-src","srcsetAttr":"data-srcset","sizesAttr":"data-sizes","minSize":40,"customMedia":[],"init":true,"expFactor":1.5,"hFac":0.8,"loadMode":2,"loadHidden":true,"ricTimeout":0,"throttleDelay":125,"plugins":[]},"placeholderSrc":"https:\/\/www.instructure.com\/sites\/default\/files\/image\/2021-06\/Clear.gif","preferNative":false},"clearRedirectSettings":{"accept":"You are currently being automatically redirected to the version of the site appropriate for your region.","decline":"You are currently blocking all automatic redirects to the version of the site appropriate for your region."},"user":{"uid":0,"permissionsHash":"b83119b4f4523d69ef0a0f157501af6509f6a2acddce565d1fbeb9693a16b585"}}
+  </script> 
+  <script src="//app-ab20.marketo.com/js/forms2/js/forms2.min.js"></script> 
+  <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]--> 
+  <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script> 
+  <script src="/sites/default/files/js/js_3bUirwRw1-cp3dRcXi_9P5h2n-Idv7oBFZQu5wrq2O0.js"></script> 
+  <script src="//munchkin.marketo.net/munchkin.js"></script> 
+  <script src="/sites/default/files/js/js_fZCIQCorEUiasuCLPiD6avIiua69xpzLgSxkSj_iSLY.js"></script> 
+  <!-- v -this is the head-tag- v --> 
+  <meta name="facebook-domain-verification" content="jkckh14vhu5ymqiv1s8xu44esm7qqn" /> 
+  <!-- ^ -this is the head-tag- ^ --> 
+  <meta name="theme-color" content="#8eabc3" /> 
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> 
+ </head> 
+ <body class="path-node page-node-type-page"> 
+  <div id="skip-to-content"> 
+   <a href="#main-content" class="skip-to-content-link">Skip to main content</a> 
+  </div> 
+  <noscript aria-hidden="true">
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMN72MJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas=""> 
+   <div class="layout-container"> 
+    <header role="banner"> 
+     <div data-sticky-container=""> 
+      <div class="sticky sticky-header" data-sticky="" data-margin-top="0" data-sticky-on="small"> 
+       <div class="region region-header-top"> 
+        <div class="region-content"> 
+         <div id="block-regionswitcher" class="block block-e3-regional-redirects block-region-switcher-block block-regionswitcher"> 
+          <div class="region-switcher-main-wrapper switcher-closed">
+           <div class="region-switcher-modal hidden">
+            <div class="region-switcher-modal-logo"></div> 
+            <button class="region-switcher-close-modal">Close modal</button> 
+            <div class="region-switcher-list-wrapper item-list">
+             <h3>Select your location</h3>
+             <ul class="region-switcher-list">
+              <li>
+               <div class="item-list">
+                <h3>Americas</h3>
+                <ul>
+                 <li class="region-switcher-link"><a href="/" data-active-text="United States" class="region-link skip-external region-link-active" hreflang="en">United States</a>
+                  <div>
+                   English
+                  </div> </li>
+                 <li class="region-switcher-link"><a href="/pt-br" data-active-text="Brazil" class="region-link skip-external" hreflang="pt-br">Brazil</a>
+                  <div>
+                   Portugu&ecirc;s
+                  </div> </li>
+                 <li class="region-switcher-link"><a href="/es" data-active-text="Latin America" class="region-link skip-external" hreflang="es">Latin America</a>
+                  <div>
+                   Espa&ntilde;ol
+                  </div> </li>
+                </ul>
+               </div></li>
+              <li>
+               <div class="item-list">
+                <h3>Asia Pacific</h3>
+                <ul>
+                 <li class="region-switcher-link"><a href="/en-au" data-active-text="Australia" class="region-link skip-external" hreflang="en-au">Australia</a>
+                  <div>
+                   English
+                  </div> </li>
+                </ul>
+               </div></li>
+              <li>
+               <div class="item-list">
+                <h3>Europe</h3>
+                <ul>
+                 <li class="region-switcher-link"><a href="/de" data-active-text="Germany" class="region-link skip-external" hreflang="de">Germany</a>
+                  <div>
+                   Deutsch
+                  </div> </li>
+                 <li class="region-switcher-link"><a href="/es-es" data-active-text="Spain" class="region-link skip-external" hreflang="es-es">Spain</a>
+                  <div>
+                   Espa&ntilde;ol
+                  </div> </li>
+                 <li class="region-switcher-link"><a href="/en-gb" data-active-text="United Kingdom" class="region-link skip-external" hreflang="en-gb">United Kingdom</a>
+                  <div>
+                   English
+                  </div> </li>
+                 <li class="region-switcher-link"><a href="/nl" data-active-text="Benelux" class="region-link skip-external" hreflang="nl">Benelux</a>
+                  <div>
+                   Dutch
+                  </div> </li>
+                </ul>
+               </div></li>
+             </ul>
+            </div>
+           </div> 
+           <div class="region-switcher-active-region">
+            <a href="/">United States</a>
+           </div> 
+          </div> 
+          <div class="region-redirect-reset-link hidden">
+           <a href="">Reset language preference</a>
+          </div> 
+          <div class="modal-redirect-reset-wrapper hidden">
+           <div class="modal-redirect-reset-copy"></div> 
+           <a href="" class="clear-preference-link">Clear redirect preference</a>
+          </div> 
+         </div> 
+         <div id="block-searchinputblock" class="block block-ins-search block-search-input block-searchinputblock"> 
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-search-page-1" action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8"> 
+           <div class="form--inline clearfix"> 
+            <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext form-no-label"> 
+             <input placeholder="Search..." data-drupal-selector="edit-search-api-fulltext" data-msg-maxlength="This field field has a maximum length of 128." type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text" /> 
+            </div> 
+            <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+             <input data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="Apply" class="button js-form-submit form-submit" /> 
+            </div> 
+           </div> 
+          </form> 
+         </div> 
+         <nav role="navigation" aria-labelledby="block-utility-menu" id="block-utility" class="block block-menu navigation menu--utility"> 
+          <h2 class="visually-hidden" id="block-utility-menu">Utility</h2> 
+          <ul class="menu utility-dropdown"> 
+           <li class="menu-item"> <a href="/canvas/try-canvas" tabindex="0" data-drupal-link-system-path="node/2281">Try Canvas Free</a> </li> 
+           <li class="menu-item"> <a href="/corporate-education" tabindex="0" data-drupal-link-system-path="node/9966">For Business</a> </li> 
+           <li class="menu-item"> <a href="/canvas/support-faq" tabindex="0" data-drupal-link-system-path="node/5401">Support</a> </li> 
+           <li class="menu-item"> <a href="/contact-us" tabindex="0" data-drupal-link-system-path="node/9286">Contact Us</a> </li> 
+           <li class="menu-item menu-item--expanded"> <span tabindex="0">Log In</span> 
+            <ul class="menu"> 
+             <li class="menu-item"> <a href="/canvas/login/free-for-teacher" class="menu-item--login-canvas" tabindex="0" data-drupal-link-system-path="node/2286">Canvas</a> </li> 
+             <li class="menu-item"> <a href="https://app.masteryconnect.com/login" class="menu-item--login-masteryconnect" tabindex="0">MasteryConnect</a> </li> 
+             <li class="menu-item"> <a href="https://portfolium.com/login" class="menu-item--login-portfolium" tabindex="0">Portfolium</a> </li> 
+            </ul> </li> 
+          </ul> 
+         </nav> 
+        </div> 
+       </div> 
+       <div class="region region-header"> 
+        <div class="region-content"> 
+         <div id="block-themekit-branding" class="block block-system block-system-branding-block block-themekit-branding"> 
+          <a href="/" rel="home" class="site-logo"> <img src="/themes/custom/themekit/logo.svg" alt="Home" /> </a> 
+         </div> 
+         <nav role="navigation" aria-labelledby="block-themekit-main-menu-menu" id="block-themekit-main-menu" class="block block-menu navigation menu--main"> 
+          <h2 class="visually-hidden" id="block-themekit-main-menu-menu">Main</h2> 
+          <ul class="menu menu-level-0 dropdown" data-dropdown-menu=""> 
+           <li class="menu-item menu-item--expanded"> <a href="/k-12" tabindex="0">K-12</a> 
+            <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> 
+                <div class="menu_link_content menu-link-contentmain view-mode-multi-column menu-dropdown menu-dropdown-2 menu-type-multi_column columns-2"> 
+                 <span tabindex="0">The Instructure Learning Platform</span> 
+                 <ul class="menu"> 
+                  <li class="menu-item"> <a href="/product/k-12/canvas-lms" tabindex="0">Canvas LMS</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Simplify teaching and learning activities and organize coursework with Canvas LMS.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/k-12/canvas-studio" tabindex="0">Canvas Studio</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Canvas Studio makes video learning more engaging and interactive.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/k-12/canvas-catalog" tabindex="0">Canvas Catalog</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Canvas Catalog streamlines and modernizes course registration and enrollment.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/k-12/masteryconnect" tabindex="0">MasteryConnect</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>MasteryConnect ties assessment data to actionable student mastery insights.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/k-12/assessment" tabindex="0">Assessments and Item Banks</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Expertly-developed assessment offerings that deliver the feedback teachers need to drive learning forward.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/k-12/videri-analytics" tabindex="0">Videri Analytics</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Videri Analytics provides real-time access to integrated district data for comprehensive insights.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="https://www.instructure.com/product/k-12/impact" tabindex="0">Impact by Instructure</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Instructure Impact helps teachers and students adopt educational technology to promote deeper engagement with learning.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/services" tabindex="0">Services</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>We offer rollout plans, product training, content development, and more.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/canvas/leadership-development" tabindex="0">Leadership Development</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Through the Center of Leadership &amp; Learning, we offer professional development experiences for school and district leaders.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/all-products" class="view-all" tabindex="0">All Products</a> </li> 
+                  <li class="menu-item"> <a href="/canvas/try-canvas" class="view-all try-canvas-K12-nav button k12-button" tabindex="0">Try Canvas Free</a> </li> 
+                 </ul> 
+                </div> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Need</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/k-12/learning-management" tabindex="0">Learning Management</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/assessment-tools" tabindex="0">Assessment</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/assessment-content" tabindex="0">Content</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/online-programs" tabindex="0">Online Programs</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/analytics" tabindex="0">Analytics</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/professional-development" tabindex="0">Professional Development</a> </li> 
+                 <li class="menu-item"> <a href="/k12/integrations-other-tools" tabindex="0">Integrations With Partner Tools</a> </li> 
+                </ul> </li> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Role</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/k-12/administrators" tabindex="0">For Administrators</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/it-technologists" tabindex="0">For IT/Technologists</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/educators" tabindex="0">For Educators</a> </li> 
+                 <li class="menu-item"> <a href="/k-12/students-parents" tabindex="0">For Students &amp; Parents</a> </li> 
+                </ul> </li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li class="menu-item menu-item--expanded"> <a href="/higher-education" tabindex="0">Higher Education</a> 
+            <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> 
+                <div class="menu_link_content menu-link-contentmain view-mode-multi-column menu-dropdown menu-dropdown-2 menu-type-multi_column columns-2"> 
+                 <span tabindex="0">The Instructure Learning Platform</span> 
+                 <ul class="menu"> 
+                  <li class="menu-item"> <a href="/product/higher-education/canvas-lms" tabindex="0">Canvas LMS</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Canvas LMS simplifies course management, communication, and student connection.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/higher-education/canvas-studio" tabindex="0">Canvas Studio</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Canvas Studio makes video learning more engaging and interactive.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/higher-education/canvas-catalog" tabindex="0">Canvas Catalog</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Canvas Catalog streamlines and modernizes course registration and enrollment.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/higher-education/pathways" tabindex="0">Pathways</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Pathways helps students map their academic and skill-building journeys.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/higher-education/program-assessment" tabindex="0">Program Assessment</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Program Assessment centralizes and scales course- and program-level assessment.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/higher-education/impact" tabindex="0">Impact by Instructure</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>Impact helps faculty and students adopt educational technology to promote deeper engagement with learning.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/services" tabindex="0">Services</a> 
+                   <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                    <p>We offer rollout plans, product training, content development, and more.</p> 
+                   </div> </li> 
+                  <li class="menu-item"> <a href="/product/all-products" class="view-all" tabindex="0">All Products</a> </li> 
+                  <li class="menu-item"> <a href="/canvas/try-canvas" class="view-all button he-button" tabindex="0">Try Canvas Free</a> </li> 
+                 </ul> 
+                </div> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Need</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/higher-education/learning-management" tabindex="0">Learning Management</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/student-engagement-success" tabindex="0">Student Engagement &amp; Success</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/instructional-content" tabindex="0">Content</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/online-programs" tabindex="0">Online Programs</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/data-analytics" tabindex="0">Analytics</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/integrations-other-tools" tabindex="0">Integrations With Partner Tools</a> </li> 
+                </ul> </li> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Role</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/higher-education/administrators" tabindex="0">For Administrators</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/it-technologists" tabindex="0">For IT/Technologists</a> </li> 
+                 <li class="menu-item"> <a href="/higher-education/educators" tabindex="0">For Educators</a> </li> 
+                </ul> </li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li class="menu-item menu-item--expanded"> <a href="https://www.instructure.com/canvas/resources" tabindex="0">Resources</a> 
+            <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">By Type</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/articles" tabindex="0">Articles</a> </li> 
+                 <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/research" tabindex="0">Research</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/infographics" tabindex="0">Infographics</a> </li> 
+                 <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/guides-ebooks" tabindex="0">Guides &amp; E-Books</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/on-demand-webinars" tabindex="0">Webinars</a> </li> 
+                 <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/videos" tabindex="0">Videos</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/case-studies" tabindex="0">Case Studies</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/customer-love" tabindex="0">Customer Stories</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources" class="view-all" tabindex="0">All Resources</a> </li> 
+                </ul> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">Centers</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources" tabindex="0">The Study Hall</a> 
+                  <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                   <p>Articles, videos, stories, and news about our products, edtech, and education.</p> 
+                  </div> </li> 
+                 <li class="menu-item"> <a href="/canvas/community" tabindex="0">Our Community</a> 
+                  <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                   <p>Share ideas, ask and answer questions, access guides, and connect with peers.</p> 
+                  </div> </li> 
+                 <li class="menu-item"> <a href="https://www.canvas.net/" tabindex="0">Canvas Network</a> 
+                  <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                   <p>Modify and use online courses from educators and institutions worldwide.</p> 
+                  </div> </li> 
+                 <li class="menu-item"> <a href="https://community.canvaslms.com/t5/Partners/ct-p/partners" tabindex="0">Integrations</a> 
+                  <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                   <p>See how we integrate with your SIS, custom apps, and hundreds of external edu apps.</p> 
+                  </div> </li> 
+                </ul> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item"> 
+                <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+                 <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+                  <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                   <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                    <picture> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png.webp?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png.webp?itok=LY9R0AEY 2x" type="image/webp"></source> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=LY9R0AEY 2x" type="image/png"></source> 
+                     <img srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=LY9R0AEY 2x" src="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf" alt="State of HE Highlight" typeof="foaf:Image" /> 
+                    </picture> 
+                   </div> 
+                   <div class="paragraph-content"> 
+                    <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="state-of-student-success-and-engagement-in-higher-education"><p>State of Student Success and Engagement in Higher Education</p> </h4> 
+                    <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                     <a href="/higher-education/student-engagement-success/student-engagement-college-success-higher-education-research-trends-report">Learn More</a>
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li class="menu-item menu-item--expanded"> <a href="/news-events" tabindex="0">News &amp; Events</a> 
+            <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">By Type</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/events/instructurecon21" tabindex="0">InstructureCon Online 2021</a> </li> 
+                 <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/on-demand-webinars" tabindex="0">Webinars</a> </li> 
+                 <li class="menu-item"> <a href="/media-resources" tabindex="0">Media Resources</a> </li> 
+                 <li class="menu-item"> <a href="/news/public-relations" tabindex="0">Press Releases</a> </li> 
+                </ul> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item"> 
+                <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+                 <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+                  <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                   <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                    <picture> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg.webp?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg.webp?itok=FQeZQ-Rg 2x" type="image/webp"></source> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=FQeZQ-Rg 2x" type="image/jpeg"></source> 
+                     <img srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=FQeZQ-Rg 2x" src="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S" alt="Using Integrated Analytics Webinar" typeof="foaf:Image" /> 
+                    </picture> 
+                   </div> 
+                   <div class="paragraph-content"> 
+                    <div class="clearfix text-formatted field field--name-field-micro-heading field--type-text-long field--label-hidden field__item">
+                     <p>Webinar</p> 
+                    </div> 
+                    <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="using-integrated-analytics-to-uncover-student-needs"><p>Using Integrated Analytics To Uncover Student Needs</p> </h4> 
+                    <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                     <a href="https://event.on24.com/wcc/r/3490228/B650F0F94EA497E2E076F32CF8DA31EF">Register Now</a>
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </li> 
+              </ul> </li> 
+            </ul> </li> 
+           <li class="menu-item menu-item--expanded"> <a href="/about" tabindex="0">About Us</a> 
+            <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">The Company</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/about/our-story" tabindex="0">Our Story</a> </li> 
+                 <li class="menu-item"> <a href="/about/leadership" tabindex="0">Leadership</a> </li> 
+                 <li class="menu-item"> <a href="/about/careers" tabindex="0">Careers</a> </li> 
+                 <li class="menu-item"> <a href="https://ir.instructure.com/" tabindex="0">Investor Relations</a> </li> 
+                 <li class="menu-item"> <a href="/contact-us" tabindex="0">Contact Us</a> </li> 
+                </ul> </li> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">We Value</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/canvas/privacy" tabindex="0">Privacy</a> </li> 
+                 <li class="menu-item"> <a href="/canvas/security" tabindex="0">Security</a> </li> 
+                 <li class="menu-item"> <a href="/accessibility" tabindex="0">Accessibility</a> </li> 
+                </ul> </li> 
+               <li class="menu-item menu-item--expanded"> <span tabindex="0">The EdTech Collective</span> 
+                <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+                 <li class="menu-item"> <a href="/our-partners" tabindex="0">Our Partner Ecosystem</a> </li> 
+                 <li class="menu-item"> <a href="/partner-details" tabindex="0">Become a Partner</a> </li> 
+                </ul> </li> 
+              </ul> </li> 
+             <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+              <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+               <li class="menu-item"> 
+                <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+                 <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+                  <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                   <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                    <picture> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png.webp?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png.webp?itok=TqOFDpBf 2x" type="image/webp"></source> 
+                     <source srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=TqOFDpBf 2x" type="image/png"></source> 
+                     <img srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=TqOFDpBf 2x" src="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr" alt="pirate panda" typeof="foaf:Image" /> 
+                    </picture> 
+                   </div> 
+                   <div class="paragraph-content"> 
+                    <div class="clearfix text-formatted field field--name-field-micro-heading field--type-text-long field--label-hidden field__item">
+                     <p>Work with Us</p> 
+                    </div> 
+                    <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="instructure-careers"><p>Instructure Careers</p> </h4> 
+                    <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                     <a href="https://www.instructure.com/canvas/resources/wistia-uberflip-videos-noram/instructure-careers">Watch the Video</a>
+                    </div> 
+                   </div> 
+                  </div> 
+                 </div> 
+                </div> </li> 
+              </ul> </li> 
+            </ul> </li> 
+          </ul> 
+         </nav> 
+         <div id="block-getademo" class="block block-block-content block-block-content2400af04-38e3-46a4-8dc1-5152e588f63b block--text block-getademo"> 
+          <div class="paragraph paragraph--type--link-default paragraph--view-mode--default"> 
+           <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+            <a href="/request-demo">Get a Demo</a>
+           </div> 
+          </div> 
+         </div> 
+         <button class="menu-toggle" type="button"><span>Menu</span></button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="region region-mobile-nav"> 
+      <div id="block-searchinputblock-2" class="block block-ins-search block-search-input block-searchinputblock-2"> 
+       <form class="views-exposed-form" data-drupal-selector="views-exposed-form-search-page-1" action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8"> 
+        <div class="form--inline clearfix"> 
+         <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext form-no-label"> 
+          <input placeholder="Search..." data-drupal-selector="edit-search-api-fulltext" data-msg-maxlength="This field field has a maximum length of 128." type="text" id="edit-search-api-fulltext--2" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-text" /> 
+         </div> 
+         <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2">
+          <input data-drupal-selector="edit-submit-search-2" type="submit" id="edit-submit-search--2" value="Apply" class="button js-form-submit form-submit" /> 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+      <nav role="navigation" aria-labelledby="block-main-menu" id="block-main" class="block block-menu navigation menu--main"> 
+       <h2 class="visually-hidden" id="block-main-menu">Main</h2> 
+       <ul class="menu menu-level-0 accordion-menu" data-accordion-menu="" data-submenu-toggle="true"> 
+        <li class="menu-item menu-item--expanded"> <a href="/k-12" tabindex="0">K-12</a> 
+         <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> 
+             <div class="menu_link_content menu-link-contentmain view-mode-multi-column menu-dropdown menu-dropdown-2 menu-type-multi_column columns-2"> 
+              <span tabindex="0">The Instructure Learning Platform</span> 
+              <ul class="menu"> 
+               <li class="menu-item"> <a href="/product/k-12/canvas-lms" tabindex="0">Canvas LMS</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Simplify teaching and learning activities and organize coursework with Canvas LMS.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/k-12/canvas-studio" tabindex="0">Canvas Studio</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Canvas Studio makes video learning more engaging and interactive.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/k-12/canvas-catalog" tabindex="0">Canvas Catalog</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Canvas Catalog streamlines and modernizes course registration and enrollment.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/k-12/masteryconnect" tabindex="0">MasteryConnect</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>MasteryConnect ties assessment data to actionable student mastery insights.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/k-12/assessment" tabindex="0">Assessments and Item Banks</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Expertly-developed assessment offerings that deliver the feedback teachers need to drive learning forward.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/k-12/videri-analytics" tabindex="0">Videri Analytics</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Videri Analytics provides real-time access to integrated district data for comprehensive insights.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="https://www.instructure.com/product/k-12/impact" tabindex="0">Impact by Instructure</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Instructure Impact helps teachers and students adopt educational technology to promote deeper engagement with learning.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/services" tabindex="0">Services</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>We offer rollout plans, product training, content development, and more.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/canvas/leadership-development" tabindex="0">Leadership Development</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Through the Center of Leadership &amp; Learning, we offer professional development experiences for school and district leaders.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/all-products" class="view-all" tabindex="0">All Products</a> </li> 
+               <li class="menu-item"> <a href="/canvas/try-canvas" class="view-all try-canvas-K12-nav button k12-button" tabindex="0">Try Canvas Free</a> </li> 
+              </ul> 
+             </div> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Need</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/k-12/learning-management" tabindex="0">Learning Management</a> </li> 
+              <li class="menu-item"> <a href="/k-12/assessment-tools" tabindex="0">Assessment</a> </li> 
+              <li class="menu-item"> <a href="/k-12/assessment-content" tabindex="0">Content</a> </li> 
+              <li class="menu-item"> <a href="/k-12/online-programs" tabindex="0">Online Programs</a> </li> 
+              <li class="menu-item"> <a href="/k-12/analytics" tabindex="0">Analytics</a> </li> 
+              <li class="menu-item"> <a href="/k-12/professional-development" tabindex="0">Professional Development</a> </li> 
+              <li class="menu-item"> <a href="/k12/integrations-other-tools" tabindex="0">Integrations With Partner Tools</a> </li> 
+             </ul> </li> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Role</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/k-12/administrators" tabindex="0">For Administrators</a> </li> 
+              <li class="menu-item"> <a href="/k-12/it-technologists" tabindex="0">For IT/Technologists</a> </li> 
+              <li class="menu-item"> <a href="/k-12/educators" tabindex="0">For Educators</a> </li> 
+              <li class="menu-item"> <a href="/k-12/students-parents" tabindex="0">For Students &amp; Parents</a> </li> 
+             </ul> </li> 
+           </ul> </li> 
+         </ul> </li> 
+        <li class="menu-item menu-item--expanded"> <a href="/higher-education" tabindex="0">Higher Education</a> 
+         <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> 
+             <div class="menu_link_content menu-link-contentmain view-mode-multi-column menu-dropdown menu-dropdown-2 menu-type-multi_column columns-2"> 
+              <span tabindex="0">The Instructure Learning Platform</span> 
+              <ul class="menu"> 
+               <li class="menu-item"> <a href="/product/higher-education/canvas-lms" tabindex="0">Canvas LMS</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Canvas LMS simplifies course management, communication, and student connection.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/higher-education/canvas-studio" tabindex="0">Canvas Studio</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Canvas Studio makes video learning more engaging and interactive.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/higher-education/canvas-catalog" tabindex="0">Canvas Catalog</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Canvas Catalog streamlines and modernizes course registration and enrollment.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/higher-education/pathways" tabindex="0">Pathways</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Pathways helps students map their academic and skill-building journeys.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/higher-education/program-assessment" tabindex="0">Program Assessment</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Program Assessment centralizes and scales course- and program-level assessment.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/higher-education/impact" tabindex="0">Impact by Instructure</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>Impact helps faculty and students adopt educational technology to promote deeper engagement with learning.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/services" tabindex="0">Services</a> 
+                <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                 <p>We offer rollout plans, product training, content development, and more.</p> 
+                </div> </li> 
+               <li class="menu-item"> <a href="/product/all-products" class="view-all" tabindex="0">All Products</a> </li> 
+               <li class="menu-item"> <a href="/canvas/try-canvas" class="view-all button he-button" tabindex="0">Try Canvas Free</a> </li> 
+              </ul> 
+             </div> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Need</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/higher-education/learning-management" tabindex="0">Learning Management</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/student-engagement-success" tabindex="0">Student Engagement &amp; Success</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/instructional-content" tabindex="0">Content</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/online-programs" tabindex="0">Online Programs</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/data-analytics" tabindex="0">Analytics</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/integrations-other-tools" tabindex="0">Integrations With Partner Tools</a> </li> 
+             </ul> </li> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">Solutions by Role</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/higher-education/administrators" tabindex="0">For Administrators</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/it-technologists" tabindex="0">For IT/Technologists</a> </li> 
+              <li class="menu-item"> <a href="/higher-education/educators" tabindex="0">For Educators</a> </li> 
+             </ul> </li> 
+           </ul> </li> 
+         </ul> </li> 
+        <li class="menu-item menu-item--expanded"> <a href="https://www.instructure.com/canvas/resources" tabindex="0">Resources</a> 
+         <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">By Type</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/articles" tabindex="0">Articles</a> </li> 
+              <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/research" tabindex="0">Research</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/infographics" tabindex="0">Infographics</a> </li> 
+              <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/guides-ebooks" tabindex="0">Guides &amp; E-Books</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/on-demand-webinars" tabindex="0">Webinars</a> </li> 
+              <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/videos" tabindex="0">Videos</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/case-studies" tabindex="0">Case Studies</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/customer-love" tabindex="0">Customer Stories</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources" class="view-all" tabindex="0">All Resources</a> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">Centers</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources" tabindex="0">The Study Hall</a> 
+               <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                <p>Articles, videos, stories, and news about our products, edtech, and education.</p> 
+               </div> </li> 
+              <li class="menu-item"> <a href="/canvas/community" tabindex="0">Our Community</a> 
+               <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                <p>Share ideas, ask and answer questions, access guides, and connect with peers.</p> 
+               </div> </li> 
+              <li class="menu-item"> <a href="https://www.canvas.net/" tabindex="0">Canvas Network</a> 
+               <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                <p>Modify and use online courses from educators and institutions worldwide.</p> 
+               </div> </li> 
+              <li class="menu-item"> <a href="https://community.canvaslms.com/t5/Partners/ct-p/partners" tabindex="0">Integrations</a> 
+               <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+                <p>See how we integrate with your SIS, custom apps, and hundreds of external edu apps.</p> 
+               </div> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item"> 
+             <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+              <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+               <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                 <picture> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png.webp?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png.webp?itok=LY9R0AEY 2x" type="image/webp"></source> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=LY9R0AEY 2x" type="image/png"></source> 
+                  <img srcset="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf 1x, /sites/default/files/styles/large_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=LY9R0AEY 2x" src="/sites/default/files/styles/small_hq/public/image/2021-09/2021_sohe_nav_thumb.png?itok=GqcF5eIf" alt="State of HE Highlight" typeof="foaf:Image" /> 
+                 </picture> 
+                </div> 
+                <div class="paragraph-content"> 
+                 <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="state-of-student-success-and-engagement-in-higher-education"><p>State of Student Success and Engagement in Higher Education</p> </h4> 
+                 <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                  <a href="/higher-education/student-engagement-success/student-engagement-college-success-higher-education-research-trends-report">Learn More</a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+           </ul> </li> 
+         </ul> </li> 
+        <li class="menu-item menu-item--expanded"> <a href="/news-events" tabindex="0">News &amp; Events</a> 
+         <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">By Type</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="https://www.instructure.com/events/instructurecon21" tabindex="0">InstructureCon Online 2021</a> </li> 
+              <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources/on-demand-webinars" tabindex="0">Webinars</a> </li> 
+              <li class="menu-item"> <a href="/media-resources" tabindex="0">Media Resources</a> </li> 
+              <li class="menu-item"> <a href="/news/public-relations" tabindex="0">Press Releases</a> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item"> 
+             <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+              <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+               <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                 <picture> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg.webp?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg.webp?itok=FQeZQ-Rg 2x" type="image/webp"></source> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=FQeZQ-Rg 2x" type="image/jpeg"></source> 
+                  <img srcset="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S 1x, /sites/default/files/styles/large_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=FQeZQ-Rg 2x" src="/sites/default/files/styles/small_hq/public/image/2021-10/2021_10_K12_Webinar_Banner_2.jpg?itok=KNtGvL0S" alt="Using Integrated Analytics Webinar" typeof="foaf:Image" /> 
+                 </picture> 
+                </div> 
+                <div class="paragraph-content"> 
+                 <div class="clearfix text-formatted field field--name-field-micro-heading field--type-text-long field--label-hidden field__item">
+                  <p>Webinar</p> 
+                 </div> 
+                 <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="using-integrated-analytics-to-uncover-student-needs"><p>Using Integrated Analytics To Uncover Student Needs</p> </h4> 
+                 <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                  <a href="https://event.on24.com/wcc/r/3490228/B650F0F94EA497E2E076F32CF8DA31EF">Register Now</a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+           </ul> </li> 
+         </ul> </li> 
+        <li class="menu-item menu-item--expanded"> <a href="/about" tabindex="0">About Us</a> 
+         <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-type-default"> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">The Company</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/about/our-story" tabindex="0">Our Story</a> </li> 
+              <li class="menu-item"> <a href="/about/leadership" tabindex="0">Leadership</a> </li> 
+              <li class="menu-item"> <a href="/about/careers" tabindex="0">Careers</a> </li> 
+              <li class="menu-item"> <a href="https://ir.instructure.com/" tabindex="0">Investor Relations</a> </li> 
+              <li class="menu-item"> <a href="/contact-us" tabindex="0">Contact Us</a> </li> 
+             </ul> </li> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">We Value</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/canvas/privacy" tabindex="0">Privacy</a> </li> 
+              <li class="menu-item"> <a href="/canvas/security" tabindex="0">Security</a> </li> 
+              <li class="menu-item"> <a href="/accessibility" tabindex="0">Accessibility</a> </li> 
+             </ul> </li> 
+            <li class="menu-item menu-item--expanded"> <span tabindex="0">The EdTech Collective</span> 
+             <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default"> 
+              <li class="menu-item"> <a href="/our-partners" tabindex="0">Our Partner Ecosystem</a> </li> 
+              <li class="menu-item"> <a href="/partner-details" tabindex="0">Become a Partner</a> </li> 
+             </ul> </li> 
+           </ul> </li> 
+          <li class="menu-item menu-item--expanded"> <span class="hide-title" tabindex="0">Column</span> 
+           <ul class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default"> 
+            <li class="menu-item"> 
+             <div class="menu_link_content menu-link-contentmain view-mode-callout menu-dropdown menu-dropdown-2 menu-type-callout"> 
+              <div class="field field--name-field-p-callout field--type-entity-reference-revisions field--label-hidden field__item"> 
+               <div class="paragraph paragraph--type--menu-callout paragraph--view-mode--default"> 
+                <div class="field field--name-field-media field--type-entity-reference field--label-hidden field__item"> 
+                 <picture> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png.webp?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png.webp?itok=TqOFDpBf 2x" type="image/webp"></source> 
+                  <source srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=TqOFDpBf 2x" type="image/png"></source> 
+                  <img srcset="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr 1x, /sites/default/files/styles/large_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=TqOFDpBf 2x" src="/sites/default/files/styles/small_hq/public/image/2021-01/Instructure%20Careers%20.png?itok=Ipu6BxUr" alt="pirate panda" typeof="foaf:Image" /> 
+                 </picture> 
+                </div> 
+                <div class="paragraph-content"> 
+                 <div class="clearfix text-formatted field field--name-field-micro-heading field--type-text-long field--label-hidden field__item">
+                  <p>Work with Us</p> 
+                 </div> 
+                 <h4 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="instructure-careers"><p>Instructure Careers</p> </h4> 
+                 <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+                  <a href="https://www.instructure.com/canvas/resources/wistia-uberflip-videos-noram/instructure-careers">Watch the Video</a>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> </li> 
+           </ul> </li> 
+         </ul> </li> 
+       </ul> 
+      </nav> 
+      <div id="block-regionswitcher-2" class="block block-e3-regional-redirects block-region-switcher-block block-regionswitcher-2"> 
+       <div class="region-switcher-main-wrapper switcher-closed">
+        <div class="region-switcher-modal hidden">
+         <div class="region-switcher-modal-logo"></div> 
+         <button class="region-switcher-close-modal">Close modal</button> 
+         <div class="region-switcher-list-wrapper item-list">
+          <h3>Select your location</h3>
+          <ul class="region-switcher-list">
+           <li>
+            <div class="item-list">
+             <h3>Americas</h3>
+             <ul>
+              <li class="region-switcher-link"><a href="/" data-active-text="United States" class="region-link skip-external region-link-active" hreflang="en">United States</a>
+               <div>
+                English
+               </div> </li>
+              <li class="region-switcher-link"><a href="/pt-br" data-active-text="Brazil" class="region-link skip-external" hreflang="pt-br">Brazil</a>
+               <div>
+                Portugu&ecirc;s
+               </div> </li>
+              <li class="region-switcher-link"><a href="/es" data-active-text="Latin America" class="region-link skip-external" hreflang="es">Latin America</a>
+               <div>
+                Espa&ntilde;ol
+               </div> </li>
+             </ul>
+            </div></li>
+           <li>
+            <div class="item-list">
+             <h3>Asia Pacific</h3>
+             <ul>
+              <li class="region-switcher-link"><a href="/en-au" data-active-text="Australia" class="region-link skip-external" hreflang="en-au">Australia</a>
+               <div>
+                English
+               </div> </li>
+             </ul>
+            </div></li>
+           <li>
+            <div class="item-list">
+             <h3>Europe</h3>
+             <ul>
+              <li class="region-switcher-link"><a href="/de" data-active-text="Germany" class="region-link skip-external" hreflang="de">Germany</a>
+               <div>
+                Deutsch
+               </div> </li>
+              <li class="region-switcher-link"><a href="/es-es" data-active-text="Spain" class="region-link skip-external" hreflang="es-es">Spain</a>
+               <div>
+                Espa&ntilde;ol
+               </div> </li>
+              <li class="region-switcher-link"><a href="/en-gb" data-active-text="United Kingdom" class="region-link skip-external" hreflang="en-gb">United Kingdom</a>
+               <div>
+                English
+               </div> </li>
+              <li class="region-switcher-link"><a href="/nl" data-active-text="Benelux" class="region-link skip-external" hreflang="nl">Benelux</a>
+               <div>
+                Dutch
+               </div> </li>
+             </ul>
+            </div></li>
+          </ul>
+         </div>
+        </div> 
+        <div class="region-switcher-active-region">
+         <a href="/">United States</a>
+        </div> 
+       </div> 
+       <div class="region-redirect-reset-link hidden">
+        <a href="">Reset language preference</a>
+       </div> 
+       <div class="modal-redirect-reset-wrapper hidden">
+        <div class="modal-redirect-reset-copy"></div> 
+        <a href="" class="clear-preference-link">Clear redirect preference</a>
+       </div> 
+      </div> 
+      <nav role="navigation" aria-labelledby="block-utility-2-menu" id="block-utility-2" class="block block-menu navigation menu--utility"> 
+       <h2 class="visually-hidden" id="block-utility-2-menu">Utility</h2> 
+       <ul class="menu utility-dropdown"> 
+        <li class="menu-item"> <a href="/canvas/try-canvas" tabindex="0" data-drupal-link-system-path="node/2281">Try Canvas Free</a> </li> 
+        <li class="menu-item"> <a href="/corporate-education" tabindex="0" data-drupal-link-system-path="node/9966">For Business</a> </li> 
+        <li class="menu-item"> <a href="/canvas/support-faq" tabindex="0" data-drupal-link-system-path="node/5401">Support</a> </li> 
+        <li class="menu-item"> <a href="/contact-us" tabindex="0" data-drupal-link-system-path="node/9286">Contact Us</a> </li> 
+        <li class="menu-item menu-item--expanded"> <span tabindex="0">Log In</span> 
+         <ul class="menu"> 
+          <li class="menu-item"> <a href="/canvas/login/free-for-teacher" class="menu-item--login-canvas" tabindex="0" data-drupal-link-system-path="node/2286">Canvas</a> </li> 
+          <li class="menu-item"> <a href="https://app.masteryconnect.com/login" class="menu-item--login-masteryconnect" tabindex="0">MasteryConnect</a> </li> 
+          <li class="menu-item"> <a href="https://portfolium.com/login" class="menu-item--login-portfolium" tabindex="0">Portfolium</a> </li> 
+         </ul> </li> 
+       </ul> 
+      </nav> 
+      <div id="block-getademo-2" class="block block-block-content block-block-content2400af04-38e3-46a4-8dc1-5152e588f63b block--text block-getademo-2"> 
+       <div class="paragraph paragraph--type--link-default paragraph--view-mode--default"> 
+        <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+         <a href="/request-demo">Get a Demo</a>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header> 
+    <div class="region region-highlighted"> 
+     <div data-drupal-messages-fallback="" class="hidden"></div> 
+    </div> 
+    <main id="main-content" role="main"> 
+     <div class="layout-content"> 
+      <div class="region region-content"> 
+       <div id="block-themekit-page-title" class="block block-core block-page-title-block block-themekit-page-title"> 
+        <h1 class="page-title"><span property="schema:name" class="field field--name-title field--type-string field--label-hidden">Acceptable Use Policy</span> </h1> 
+       </div> 
+       <div id="block-themekit-content" class="block block-system block-system-main-block block-themekit-content"> 
+        <article role="article" about="/policies/acceptable-use" typeof="schema:WebPage" class="node node--type-page node--view-mode-full"> 
+         <span property="schema:name" content="Acceptable Use Policy" class="rdf-meta hidden"></span> 
+         <div class="node__content"> 
+          <div property="schema:text" class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+           <p><em>Effective as of January 11, 2018</em></p> 
+           <p>Instructure, Inc.’s (and its affiliate(s)) (referenced herein as “Instructure”) Acceptable Use Policy rules and guidelines (referenced herein collectively as the “<strong>AUP GUIDELINES</strong>”) cover and govern each individual end user’s (referenced herein with “you” or with “your”) use and access to Instructure’s services and websites (referenced herein as the “<strong>SERVICE</strong>”). Instructure’s Privacy Policy explains how or whether Instructure (referenced herein with “we” “our” and “us”) collects and uses your personally identifiable information.&nbsp;<strong>BY USING OUR SERVICE, YOU’RE AGREEING TO USE THE SERVICE IN ACCORDANCE WITH THESE AUP GUIDELINES, AND TO REVIEW INSTRUCTURE’S PRIVACY POLICY. PLEASE ALSO NOTE THAT THESE AUP GUIDELINES AND THE PRIVACY POLICY ARE SUBJECT TO CHANGE. PLEASE REVIEW THE APPLICABLE CURRENT VERSIONS <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="adf20bf5-4167-448a-9203-16967e3f05d4" href="/canvas/privacy">HERE</a> AND <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="16c338d3-b50e-4f3b-ac60-b22c3813e10a" href="/policies/acceptable-use">HERE</a>. IF YOU DO NOT AGREE TO BE BOUND BY THESE AUP GUIDELINES OR DISAGREE WITH THE PERSONALLY IDENTIFIABLE INFORMATION COLLECTION AND USE PRACTICES, YOU SHOULD AND MAY NOT ACCESS OR USE THE SERVICE.</strong></p> 
+           <p><strong>LICENSE GRANT</strong><br /> These AUP Guidelines provide to you a personal, revocable, limited, non-exclusive, and non-transferable license to use the Service conditioned upon your continued compliance with these AUP Guidelines. Instructure reserves all rights not granted in the AUP Guidelines.</p> 
+           <p><strong>YOUR CONTENT &amp; YOUR PERMISSIONS</strong><br /> When you use our Service, you provide us with things like your files, content, messages, etc. (“Your Content”). Your Content is yours. You represent that you have all necessary right, power, and authority to use the Service and share Your Content and will comply with all applicable laws when doing so. These AUP Guidelines don’t give us any rights to Your Content except for the limited rights that enable us to offer the Service. We need your permission to do things like host Your Content, back it up, or share it when you ask us to. This permission extends to our trusted third parties we work with. You therefore give us, and third parties (with whom we work) permission to use, display, host, share, and back up Your Content. By submitting Your Content, you also permit us to identify you by your username and as the contributor of Your Content.</p> 
+           <p><strong>SHARING YOUR CONTENT</strong><br /> Our Service lets you share Your Content with others, so please think carefully about what you share. By using the Service, you agree to do so responsibly and to not misuse the Service or help anyone else do so. This includes, but is not limited to, not doing or trying to do any of the following in connection with the Service:</p> 
+           <ul> 
+            <li>store, transmit or create libelous, obscene, deceptive, defamatory, pornographic, racist, sexual, hateful, unlawful, tortious or otherwise objectionable content (except as necessary for legitimate instructional purposes, but in all cases in compliance with applicable laws and regulations);</li> 
+            <li>modify, translate, adapt, merge, make derivative works of, disassemble, decompile, reverse compile or reverse engineer any part of the Service except to the extent the foregoing restrictions are expressly prohibited by applicable law;</li> 
+            <li>harm, harass, threaten, or impersonate any person or violate the rights of any third party;</li> 
+            <li>probe, scan, or test the vulnerability of any system or network;</li> 
+            <li>interfere with or disrupt the integrity or performance of the Service;</li> 
+            <li>attempt to gain unauthorized access to the Service or its related systems or networks;</li> 
+            <li>introduce viruses, Trojan horses, worms, spyware, or other such malicious code into the Service;</li> 
+            <li>breach or otherwise circumvent any security or authentication measures;</li> 
+            <li>access, tamper with, or use non-public areas or parts of the Service, or shared areas of the Service you haven't been invited to;</li> 
+            <li>access, search, or create accounts for the Service by any means other than our publicly supported interfaces (for example, &quot;scraping&quot; or creating accounts in bulk);</li> 
+            <li>send unsolicited communications, promotions or advertisements, or spam;</li> 
+            <li>send altered, deceptive or false source-identifying information, including &quot;spoofing&quot; or &quot;phishing&quot;;</li> 
+            <li>promote or advertise products or services other than your own without appropriate authorization;</li> 
+            <li>sell or re-sell the Service unless specifically authorized to do so;</li> 
+            <li>copy, reproduce, distribute, republish, download, display, post or transmit in any form or by any means any part of the Service unless specifically authorized to do so;</li> 
+            <li>remove or destroy any copyright notices or other proprietary markings contained on or in the Service; or</li> 
+            <li>violate the law in any way, including by storing, publishing or sharing material that is infringing, fraudulent, defamatory, misleading, or damaging to Instructure in any way.</li> 
+           </ul> 
+           <p><strong>YOUR RESPONSIBILITIES</strong><br /> You must provide all equipment necessary to access the Service and are responsible for all fees incurred when accessing the Service. Additionally, you’re responsible for your conduct and Your Content and your compliance with these AUP Guidelines. Content in the Service may be protected by others’ intellectual property rights. You therefore agree that you won’t copy, reproduce, create derivative works of, decompile, upload, download, share, or otherwise exploit third party content unless you have the right to do so. We may review your conduct and content for compliance with these AUP Guidelines and remove content from the Service at any time and without notice. With that said, we have no obligation to do so. We aren’t responsible for the content people post and share via the Service. You agree also to safeguard your password to the Service, make sure that others don’t have access to it, and keep your account information current.</p> 
+           <p><strong>THIRD PARTY WEBSITES</strong><br /> The Service may contain links to third-party websites that are not under our control. We are not responsible for such third-party websites.</p> 
+           <p><strong>OUR PROPERTY</strong><br /> The Service is protected by copyright, trademark, and other US and foreign laws. These AUP Guidelines don’t grant you any right, title, or interest in the Service or others’ content in the Service. We welcome feedback, but note that we may use comments or suggestions without any obligation to you.</p> 
+           <p><strong>INFRINGEMENT</strong><br /> We respect the intellectual property of others and ask that you do too. We respond to notices of alleged infringement after receipt of a proper notice that complies with the law and is received by our designated agent. We reserve the right to delete or disable content alleged to be infringing and terminate accounts of repeat infringers. If you believe that any content in the Service in a way that constitutes infringement, please provide our designated agent with the following information:</p> 
+           <ol type="A"> 
+            <li>an electronic or physical signature of the person authorized to act on behalf of the rights owner;</li> 
+            <li>a description of the content you claim is being infringed;</li> 
+            <li>a description or link to the location of the material claim is infringing;</li> 
+            <li>your physical address, telephone number and e-mail address;</li> 
+            <li>a statement that you have a good faith belief that the content is not authorized by the rights owner, its agent or the law;</li> 
+            <li>a statement, made under penalty of perjury, that the information in your notice is accurate and that you are the owner or authorized to act on behalf of the owner.</li> 
+           </ol> 
+           <p>Contact information for Instructure’s designated agent for notice of claims of infringement is as follows: General Counsel; 6330 South 3000 East, Suite 700, Salt Lake City, UT 84121;&nbsp;<a href="mailto:legal@instructure.com" target="_blank">legal@instructure.com</a>. Instructure may also take any appropriate action in the event it receives a proper counter-notice under the law.</p> 
+           <p><strong>TERMINATION &amp; RIGHT TO SUSPEND</strong><br /> You’re free to stop using our Service at any time. We also reserve the right to suspend or end the Service at any time at our discretion and without notice. For example, we may suspend or terminate your use of the Service and remove Your Content if you’re not complying with these AUP Guidelines, or using the Service in a manner that may cause us legal liability, disrupt the Service, disrupt others’ use of the Service or, in our sole opinion, reason, cause harm. All provisions of these AUP Guidelines, which by their nature should survive, will survive termination of the Service.</p> 
+           <p><strong>SERVICE “AS IS”</strong><br /> INSTRUCTURE AND ITS PARTNERS MAKE NO WARRANTIES, EITHER EXPRESS OR IMPLIED, ABOUT THE SERVICE. THE SERVICE IS PROVIDED “AS IS.” IN ADDITION, WE DISCLAIM ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. ANY CONTENT DOWNLOADED OR ACCESSED FROM THE SERVICE IS ACCESSED AT YOUR OWN RISK.</p> 
+           <p><strong>LIMITATION OF LIABILITY</strong><br /> YOU EXPRESSLY ABSOLVE AND RELEASE INSTRUCTURE FROM ANY CLAIM OF HARM RESULTING FROM A CAUSE BEYOND INSTRUCTURE’S CONTROL. YOU FURTHER AGREE THAT IN NO EVENT SHALL INSTRUCTURE AND ITS SUPPLIERS BE LIABLE FOR ANY DAMAGES OTHER THAN DIRECT DAMAGES, OR ANY LOSS OF USE, DATA BUSINESS, OR PROFITS. THIS WILL BE REGARDLESS OF WHETHER OR NOT INSTRUCTURE OR ANY OF ITS PARTNERS HAS BEEN WARNED OF THE POSSIBILITY OF SUCH DAMAGES. ADDITIONALLY, INSTRUCTURE AND ITS SUPPLIERS WILL NOT BE LIABLE TO YOU FOR MORE THAN ANY AMOUNTS RECEIVED BY INSTRUCTURE FROM YOU AS A RESULT OF YOUR PERSONAL USE OF THE SERVICE IN THE 12 MONTHS PRECEDING YOUR CLAIM. IF YOU HAVE NOT PAID INDIVIDUALLY ANY AMOUNTS IN THE 12 MONTHS PRECEDING YOUR CLAIM, INSTRUCTURE’S SOLE AND EXCLUSIVE LIABILITY SHALL BE NO MORE THAN $50. MOREOVER, INSTRUCTURE SHALL NOT BE LIABLE FOR THE LOSS OR FAILURE TO STORE YOUR CONTENT, AND YOU UNDERSTAND AND AGREE THAT BY USING THE SERVICE, YOU AGREE TO WAIVE THE RIGHT TO A TRIAL BY JURY AND THE RIGHT TO PARTICIPATE IN A CLASS ACTION RELATED TO USE OF THE SERVICE OR BREACH OF THESE AUP GUIDELINES.</p> 
+           <p><strong>CONTROLLING LAW</strong><br /> These AUP Guidelines and your use of the Service will be interpreted, governed and construed by the laws of Delaware law except for its conflicts of laws principles, unless otherwise agreed in a separate written agreement with Instructure or as required by a mandatory law of a competent jurisdiction.</p> 
+           <p><strong>ENTIRE AGREEMENT</strong><br /> These AUP Guidelines set forth terms governing your use of the Service, and supersede and replace any other prior or contemporaneous agreements applicable to the subject matter of these AUP Guidelines. These AUP Guidelines create no third-party beneficiary rights. These AUP Guidelines shall inure to the benefit of Instructure and its respective legal representatives, successors, and assigns.</p> 
+           <p><strong>WAIVER, SEVERABILITY &amp; ASSIGNMENT</strong><br /> Instructure’s failure to enforce a provision is not a waiver of its right to do so later. You may not assign any of your rights under these AUP Guidelines, and any such attempt will be void. Instructure may assign its rights to any of its affiliates or subsidiaries, or to any successor in interest of any business associated with the Service. If any provision of these AUP Guidelines is held by a court of competent jurisdiction to be contrary to law, such provision shall be changed and interpreted so as to best accomplish the objectives of the original provision to the fullest extent allowed by law and the remaining provisions of these AUP Guidelines will remain in full force and effect.</p> 
+           <p><strong>MODIFICATIONS</strong><br /> We may revise these AUP Guidelines from time to time, and will always post the most current version&nbsp;<a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="16c338d3-b50e-4f3b-ac60-b22c3813e10a" href="/policies/acceptable-use">HERE</a>. If a revision meaningfully reduces your rights, we will provide notice to you (by, for example, sending a message to the email address associated with your account). By continuing to use or access the Service after the revisions come into effect, you agree to be bound by and subject to the revised AUP Guidelines.</p> 
+           <p><strong>NOTICES</strong><br /> For any notices relating to these AUP Guidelines, you may contact Instructure by sending an email to&nbsp;<a href="mailto:legal@instructure.com" target="_blank">legal@instructure.com</a>.</p>
+          </div> 
+         </div> 
+        </article> 
+        <script>
+if("/" != '/'){
+  document.getElementsByClassName('site-logo')[0].children[0].src = "/"
+}
+
+        </script> 
+       </div> 
+      </div> 
+     </div> 
+    </main> 
+    <footer role="contentinfo"> 
+     <div class="region region-footer"> 
+      <div class="region-content"> 
+       <a class="logo-footer" href="/" title="Home">Home</a> 
+       <div id="block-footercontact" class="block block-block-content block-block-content83c8e43c-d074-4b35-9946-36d6444cfb8f block--text block-footercontact"> 
+        <h2 class="field heading field--name-field-heading field--type-text-long field--label-hidden field__item" id="global-hq"><p>Global HQ</p> </h2> 
+        <div class="clearfix text-formatted field field--name-field-description field--type-text-long field--label-hidden field__item">
+         <p>6330 South 3000 East Suite 700 Salt Lake City, UT 84121 USA</p>
+        </div> 
+        <div class="paragraph paragraph--type--link-default paragraph--view-mode--default"> 
+         <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+          <a href="/contact-us">Contact Us</a>
+         </div> 
+        </div> 
+        <div class="paragraph paragraph--type--link-default paragraph--view-mode--default"> 
+         <div class="field field--name-field-link field--type-link field--label-hidden field__item">
+          <a href="tel:800-203-6755">800-203-6755</a>
+         </div> 
+        </div> 
+       </div> 
+       <nav role="navigation" aria-labelledby="block-themekit-footer-menu" id="block-themekit-footer" class="block block-menu navigation menu--footer"> 
+        <h2 class="visually-hidden" id="block-themekit-footer-menu">Footer menu</h2> 
+        <ul class="menu accordion-menu columns-4" data-accordion-menu=""> 
+         <li class="menu-item menu-item--expanded"> <span>Instructure Learning Platform</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/product/higher-education/canvas-lms" data-drupal-link-system-path="node/1446">Canvas LMS</a> </li> 
+           <li class="menu-item"> <a href="/product/higher-education/canvas-studio" data-drupal-link-system-path="node/1441">Canvas Studio</a> </li> 
+           <li class="menu-item"> <a href="/product/higher-education/canvas-catalog" data-drupal-link-system-path="node/1431">Canvas Catalog</a> </li> 
+           <li class="menu-item"> <a href="/product/k-12/assessment" data-drupal-link-system-path="node/10101">Assessment</a> </li> 
+           <li class="menu-item"> <a href="/product/k-12/videri-analytics" data-drupal-link-system-path="node/13166">Videri Analytics</a> </li> 
+           <li class="menu-item"> <a href="/services" data-drupal-link-system-path="node/2381">Services</a> </li> 
+           <li class="menu-item"> <a href="/product/canvas/leadership-development" data-drupal-link-system-path="node/2371">Leadership Development</a> </li> 
+           <li class="menu-item"> <a href="/product/all-products" data-drupal-link-system-path="node/10081">All Products</a> </li> 
+          </ul> </li> 
+         <li class="menu-item menu-item--expanded"> <span>Resources</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/canvas/resources/articles" data-drupal-link-system-path="node/9056">Articles</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/research" data-drupal-link-system-path="node/12696">Research</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/infographics" data-drupal-link-system-path="node/9071">Infographics</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/guides-ebooks">Guides &amp; e-Books</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/on-demand-webinars" data-drupal-link-system-path="node/9081">Webinars</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/videos" data-drupal-link-system-path="node/9076">Videos</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/case-studies" data-drupal-link-system-path="node/9091">Case Studies</a> </li> 
+          </ul> </li> 
+         <li class="menu-item menu-item--expanded"> <span>Centers</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="https://www.instructure.com/canvas/resources">The Study Hall</a> </li> 
+           <li class="menu-item"> <a href="/canvas/community" data-drupal-link-system-path="node/2081">Our Community</a> </li> 
+           <li class="menu-item"> <a href="https://www.canvas.net/">Canvas Network</a> </li> 
+           <li class="menu-item"> <a href="https://community.canvaslms.com/t5/Partners/ct-p/partners">Integrations</a> </li> 
+          </ul> </li> 
+         <li class="menu-item menu-item--expanded"> <span>Events</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/news-events" data-drupal-link-system-path="node/9776">Events</a> </li> 
+           <li class="menu-item"> <a href="/canvas/resources/on-demand-webinars" data-drupal-link-system-path="node/9081">Webinars</a> </li> 
+           <li class="menu-item"> <a href="/media-resources" data-drupal-link-system-path="node/2401">Media Resources</a> </li> 
+           <li class="menu-item"> <a href="/news/public-relations" data-drupal-link-system-path="node/2396">Press Releases</a> </li> 
+          </ul> </li> 
+         <li class="menu-item menu-item--expanded"> <span>Customers</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/k-12">K-12</a> </li> 
+           <li class="menu-item"> <a href="http://www.instructure.com/canvas/resources/higher-education">Higher Ed</a> </li> 
+          </ul> </li> 
+         <li class="menu-item menu-item--expanded"> <span>About Us</span> 
+          <ul class="menu"> 
+           <li class="menu-item"> <a href="/about/our-story" data-drupal-link-system-path="node/2051">Our Story</a> </li> 
+           <li class="menu-item"> <a href="/canvas" data-drupal-link-system-path="node/9976">About Canvas</a> </li> 
+           <li class="menu-item"> <a href="/about/leadership" data-drupal-link-system-path="node/1366">Leadership</a> </li> 
+           <li class="menu-item"> <a href="/our-partners" data-drupal-link-system-path="node/9746">Partners</a> </li> 
+           <li class="menu-item"> <a href="/about/careers" data-drupal-link-system-path="node/2106">Careers</a> </li> 
+           <li class="menu-item"> <a href="https://ir.instructure.com/">Investor Relations</a> </li> 
+           <li class="menu-item"> <a href="/canvas/privacy" data-drupal-link-system-path="node/2091">Privacy</a> </li> 
+           <li class="menu-item"> <a href="/canvas/security" data-drupal-link-system-path="node/2111">Security</a> </li> 
+           <li class="menu-item"> <a href="/accessibility" data-drupal-link-system-path="node/14591">Accessibility</a> </li> 
+           <li class="menu-item"> <a href="/contact-us" data-drupal-link-system-path="node/9286">Contact Us</a> </li> 
+          </ul> </li> 
+        </ul> 
+       </nav> 
+       <nav role="navigation" aria-labelledby="block-footerutility-menu" id="block-footerutility" class="block block-menu navigation menu--footer-utility"> 
+        <h2 class="visually-hidden" id="block-footerutility-menu">Footer Utility</h2> 
+        <ul class="menu"> 
+         <li class="menu-item"> <a href="https://www.instructure.com/canvas/privacy">Privacy</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/policies/ccpa">California Privacy Notice</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/california-consumer-opt-out-request-form">Do Not Sell My Personal Information</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/modern-slavery-act">Modern Slavery Act</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/policies/acceptable-use">Acceptable Use</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/policies/intl-acceptable-use">Acceptable Use International</a> </li> 
+         <li class="menu-item"> <a href="https://www.instructure.com/policies/data-processing">Data Processing</a> </li> 
+        </ul> 
+       </nav> 
+      </div> 
+     </div> 
+     <div class="region region-footer-bottom"> 
+      <div class="region-content"> 
+       <nav role="navigation" aria-labelledby="block-social-menu" id="block-social" class="block block-menu navigation menu--social"> 
+        <h2 class="visually-hidden" id="block-social-menu">Social</h2> 
+        <ul class="menu"> 
+         <li class="menu-item"> <a href="https://www.linkedin.com/company/instructure-inc-/mycompany/" target="_blank">LinkedIn</a> </li> 
+         <li class="menu-item"> <a href="https://twitter.com/CanvasLMS?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Twitter</a> </li> 
+         <li class="menu-item"> <a href="https://www.facebook.com/CanvasLMS" target="_blank">Facebook</a> </li> 
+         <li class="menu-item"> <a href="https://www.instagram.com/canvaslms/?hl=en" target="_blank">Instagram</a> </li> 
+        </ul> 
+       </nav> 
+       <div id="block-footercopyright" class="block block-block-content block-block-content25eeac38-48e9-4c43-8b09-e6c10fa92eeb block--basic block-footercopyright"> 
+        <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+         <p>Copyright &copy; 2021&nbsp;Instructure, Inc. All rights reserved. Various trademarks held by their respective owners.</p>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </footer> 
+   </div> 
+  </div> 
+  <script src="/sites/default/files/js/js_7nMUZEUX3XAQuiMCUb_rT--zEERDiVwBuBx71ze1u4I.js"></script> 
+  <script src="https://static.addtoany.com/menu/page.js" async=""></script> 
+  <script src="/sites/default/files/js/js_2LmauaVpNwGmbtcKXHQUwEskIljudlIf2BZJBBJm8XM.js"></script> 
+  <script src="/modules/custom/ins_personalization/js/ins_personalization.js?v=1.x" defer=""></script> 
+  <script src="/sites/default/files/js/js_Tzc_1AaSPm19UZgC4mZVN8FY3BtTdglrCYgPZstefx0.js"></script> 
+  <!-- OneTrust Cookies Consent Notice start for www.instructure.com --> 
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="64605969-c347-4411-af89-6484d17a128a"></script> 
+  <script type="text/javascript">
+        function OptanonWrapper() { }
+      
+  </script> 
+  <!-- OneTrust Cookies Consent Notice end for www.instructure.com --> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-0d25ebe8951e931fb59","applicationID":"591976091","transactionName":"NgcEZEMFWhUDVRJdWw9NJ1NFDVsITXIUQUQADjpeXgBROiFZCEBGDg4KVUM4egkGUzBdURYhCV5FFlsKDlMUGQoXCwNH","queueTime":0,"applicationTime":1014,"atts":"GkAHEgsfSRs=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>  
+ </body>
+</html>
